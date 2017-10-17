@@ -83,7 +83,7 @@ int main()
 	std::ifstream in( "boi.dat",std::ios::binary );
 	
 	int data;
-	in.read( reinterpret_cast<char*>(&data),sizeof( int ) );
+	in.read( reinterpret_cast<char*>(&data),sizeof( int ) );  //NOT chili::read. this is ifstream::read()
 
 	char buffer[256];
 	chili::int2str( data,buffer,256 );
